@@ -19,12 +19,12 @@ git clone https://github.com/GoogleCloudPlatform/data-to-ai && cd data-to-ai
 
 # 1) Enable APIs
 cd infrastructure/project-setup
-echo 'project_id = "YOUR_PROJECT"' > terraform.tfvars
+echo 'project_id = "core-demos"' > terraform.tfvars
 terraform init && terraform apply
 
 # 2) Build env: bucket, dataset, Gemini models, Cloud Run, scheduler, agent IAM
 cd ../terraform
-printf 'project_id = "YOUR_PROJECT"\nnotification_email = "you@example.com"\n' > terraform.tfvars
+printf 'project_id = "core-demos"\nnotification_email = "louays@google.com"\n' > terraform.tfvars
 terraform init && terraform apply
 # Transient "Error creating Routine / Model not found"? From this dir:
 #   ./force-rerunning-model-creation-scripts.sh && terraform apply
