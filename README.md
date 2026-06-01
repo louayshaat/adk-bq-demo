@@ -49,7 +49,7 @@ Start the agent locally:
 cd agents/maintenance-scheduler
 pip3 install poetry && poetry install && poetry env activate
 cp .env_sample .env        # set project id; set show_thought=True for the demo
-export GOOGLE_CLOUD_PROJECT=YOUR_PROJECT
+export GOOGLE_CLOUD_PROJECT=core-demos
 export GOOGLE_GENAI_USE_VERTEXAI=1
 export GOOGLE_CLOUD_LOCATION=us-central1
 adk web                    # open the dev UI → pick "maintenance_scheduler"
